@@ -1,0 +1,25 @@
+<div id="home-page-main">
+    <form action="/users/create-notes">
+        <span>DESCRIPTION</span>
+        <input type="text" name = "description" required placeholder="What do you need to do?">
+        <span>CATEGORY</span>
+        <select name="category" id="">
+            <option value="no">Choose a category</option>
+            <option value="personal">PERSONAL</option>
+            <option value="work">WORK</option>
+            <option value="school">SCHOOL</option>
+        </select>
+        <div>
+            <span>Due Date</span>
+            <input type="date" name = "date">
+        </div>
+    
+        <div>
+            <button>ADD TASK</button>
+        </div>
+    </form>
+    <div>
+        <button>DELETE TASK</button>
+    </div>
+   
+</div>
