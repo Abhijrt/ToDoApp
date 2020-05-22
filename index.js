@@ -5,6 +5,8 @@ const expressLayouts = require('express-ejs-layouts');
 app.use(expressLayouts);
 app.use(express.static('./assets'));
 const db = require('./config/mongoose');
+const User = require('./models/user');
+app.use(express.urlencoded());
 app.set('layout extractStyles',true);
 app.set('layout extractScripts',true);
 app.use('/',require('./routes'));

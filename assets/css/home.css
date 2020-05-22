@@ -2,5 +2,30 @@
     display: inline-block;
     width: 70%;
     height: 50%;
-    margin-top: 50px;
+    margin-top: 30px;
+}
+
+#home-page-main p{
+    border: 1px solid grey;
+}
+
+.btn{
+    text-align: center;
+    margin: 10px;
+    /* height: 30px; */
+}
+
+.btn button{
+    height: 50px;
+    width: 150px;
+    border: none;
+    color: white;
+}
+
+.darkgrey{
+    background-color: darkgrey;
+}
+
+.red{
+    background-color: red;
 }
