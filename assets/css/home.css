@@ -75,10 +75,19 @@ input::placeholder{
     color:#F3F1F0;
 }
 
+#due-date{
+    border: none;
+    padding: 10px;
+    /* color: red; */
+    background-color: lightsalmon;
+    width: 80%;
+}
+
 #category{
     display: flex;
     padding: 0 !important;
     border-top: 1.8px solid white;
+    /* border-right:1.8px solid white ; */
 }
 
 #category >div{
@@ -88,18 +97,19 @@ input::placeholder{
     height: 100%;
 }
 
-#category>div:first-chil{
+#category>div:first-child{
     border-right: 1.8px solid #F0F0F0;
 }
 
 .drop-menu{
     cursor: pointer;
     margin-top: 10px;
-    width: 95%;
+    width: 55%;
     background-color: transparent;
     border: none;
     color: #F3F1F0;
     font-weight: bold;
+    border-right: 1.8px solid white;
 }
 .drop-menu option{
     color: #66666B ;
@@ -136,13 +146,7 @@ input::placeholder{
     font-size: 1.2rem;
 }
 
-.red{
-    background-color: red;
-}
 
-.dark-grey{
-    background-color: darkgray;
-}
 
 .btns>button div{
     margin:10px;
@@ -218,6 +222,9 @@ input[type="checkbox"]:checked{
 }
 
 
+
+
+
 .list-category{
     font-size:1rem;
     font-weight: bold;
@@ -232,4 +239,23 @@ input[type="checkbox"]:checked{
     vertical-align:top;
     text-align: center;
     overflow-wrap: break-word;
+}
+@media screen and (max-width:900px){
+    .list-category{
+        width: 50%;
+    }
+}
+
+
+
+.red{
+    background-color: red;
+}
+
+.dark-grey{
+    background-color: darkgray;
+}
+
+.purple{
+    background-color: purple;
 }

@@ -1,4 +1,35 @@
+var checkboxes = $('.onelist input');
+var description = $('.list-details span');
+var date = $('.list-details p');
 
+for(let i=0;i<checkboxes.length;i++){
+    checkboxes[i].addEventListener('click',function(){
+        if(checkboxes[i].checked){
+            description[i].style.textDecoration = "line-through";
+            date[i].style.textDecoration = "line-through";
+        }else{
+            description[i].style.textDecoration = "none";
+            date[i].style.textDecoration = "none";
+        }
+    });
+}
+
+var listCategory = $('.list-category');
+for(let i=0;i<listCategory.length;i++){
+    var cat = listCategory[i].innerText;
+    // var cat = div.innerText;
+    console.log(listCategory[i]);
+    console.log(cat);
+    if(cat == 'WORK'){
+        // listCategory[i].addClass("purple");
+        listCategory[i].style.backgroundColor = "blue";
+    }else if(cat == 'Personal'){
+        listCategory[i].style.backgroundColor = "red";
+    }else if(cat == 'SCHOOL'){
+        listCategory[i].style.backgroundColor = "grey";
+    }
+    console.log(cat);
+}
 
 let createList=function(){      
     let listform=$(`#new-entry`);
@@ -15,7 +46,7 @@ let createList=function(){
                 console.log(data.data.newList,"it you want to show the data");
                 let newlist=newDOMList(data.data.newlist);
                 $(".list-container").append(newlist);
-                console.log(checkboxs,taskNames,taskDates);
+                console.log("hii abhay you are in create of ajax");
                 swal({
                     title: "Added Successfully!",
                     text: "The new task is added!",
