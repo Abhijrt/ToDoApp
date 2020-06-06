@@ -5,10 +5,10 @@ const userSchema = new mongoose.Schema({
         required : true,
     },
     date : {
-        type : Date,
+        type : String,
         required : true
     },
-    category : {
+    cat : {
         type : String,
         required : true
     }

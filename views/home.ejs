@@ -1,11 +1,14 @@
-<div id="home-page-main">
+<body>
+<div class="home-page-main">
     <p></p>
-    <form action="/users/create" method="POST">
-        <span>DESCRIPTION</span>
-        <input type="text" name = "description" required placeholder="What do you need to do?">
+    <form action="/users/create" method="POST" id="new-entry">
+        <span >DESCRIPTION</span>
+        <input class="description" type="text"  name = "description" required placeholder="What do you need to do?">
         <p></p>
-        <span>CATEGORY</span>
-        <select name="category" id="">
+        
+    <div id="category">
+        <p>CATEGORY</p>
+        <select name="category" class="drop-menu">
             <option value="no">Choose a category</option>
             <option value="personal">PERSONAL</option>
             <option value="work">WORK</option>
@@ -13,27 +16,36 @@
         </select>
         <p></p>
         <div>
-            <span>Due Date</span>
-            <input type="date" name = "date">
+            <p>Due Date</p>
+            <input type="date" id='due-date' name="date" required>
         </div>
-    
-        <div class="btn">
-            <button class="darkgrey">ADD TASK</button>
-        </div>
-    </form>
-    <div class="btn ">
-        <button class="red">DELETE TASK</button>
     </div>
+    <div class="btns">
+            <button id="add-task" class="dark-grey"><i class="fas fa-plus"> ADD TASK </i></button>
+    </div>
+    </form>
+
+   <form action="/users/deleteEntry" method="get" id='delete-list-form'>
+    <ul id="list-container-details" class="list-container">
+        <% for(let i of details) {%>
+        <li id="list-<%= i._id%>" class="onelist">
+            <input type="checkbox" name="<%= i._id %>" class="markLine" >
+            <div class="list-details">
+                <span><%= i.description %></span>
+                <p class="entry-date" value="<%= i.date %>"><%= i.date %></p>
+            </div>
+            <div class="list-category">
+                <div style="margin-top: 8px;" ><%= i.cat %></div>
+            </div>
+        </li>
+        <% } %>
+    </ul>
+    <div class="btns">
+        <!-- <a class="red" href=""><i class="fas fa-trash"> DELETE TASK</i></a> -->
+        <button id="delete-task" class="red" ><i class="fas fa-trash"> DELETE TASK</i></button>
+    </div>
+</form>
 </div>
 
-<div>
-    <% for(let i of details) {%>
-        <ul>
-            <li>
-                <%= i.description %>
-                <%= i.category %>
-                <%= i.date %>
-            </li>
-        </ul>
-    <%}%>
-</div>
+
+</body>

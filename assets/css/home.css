@@ -1,31 +1,235 @@
-#home-page-main input{
-    display: inline-block;
-    width: 70%;
-    height: 50%;
-    margin-top: 30px;
+body{
+    margin: 0;
+    font-family: sans-serif;
+    color: #66666B;
 }
 
-#home-page-main p{
-    border: 1px solid grey;
+
+
+.home-page-main{
+    height: auto;
+    width:50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color : lightsalmon;
 }
 
-.btn{
+@media screen and (max-width:950px){
+    .home-page-main{
+        width: 65%;
+    }
+}
+
+
+@media screen and (max-width:650px){
+    .home-page-main{
+        width: 100%;
+    }
+}
+.center{
     text-align: center;
-    margin: 10px;
-    /* height: 30px; */
 }
 
-.btn button{
-    height: 50px;
-    width: 150px;
+#new-entry{
+    padding : 10px;
+    border-top:1.8px solid #F0F0F0;
+    /* border-bottom: 1.8px solid white; */
+    width: 100%;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#new-entry > div{
+    width: 100%;
+    height: 75px;
+    border-bottom: 1.8px solid #F0F0F0;;
+    padding-left: 2%;
+    box-sizing: border-box;
+}
+
+#new-entry > div  p
+{
+    margin:5px 0px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description{
+    width:99%;
+    height:55%;
     border: none;
-    color: white;
+    resize: none;
+    background: transparent;
+    color: #F3F1F0;
 }
 
-.darkgrey{
-    background-color: darkgrey;
+#new-entry input:focus,select:focus,input:focus{
+    outline: none;
+}
+input::placeholder{
+    color:#F3F1F0;
+}
+
+#category{
+    display: flex;
+    padding: 0 !important;
+    border-top: 1.8px solid white;
+}
+
+#category >div{
+    box-sizing: border-box;
+    padding-left: 2%;
+    width: 50%;
+    height: 100%;
+}
+
+#category>div:first-chil{
+    border-right: 1.8px solid #F0F0F0;
+}
+
+.drop-menu{
+    cursor: pointer;
+    margin-top: 10px;
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    color: #F3F1F0;
+    font-weight: bold;
+}
+.drop-menu option{
+    color: #66666B ;
+    font-weight: bold;
+    background-color: inherit;
+}
+
+.drop-menu::placeholder{
+    color:#F3F1F0;
+}
+
+.btns{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0 !important;
+    padding-bottom:25px;
+    height:auto !important;
+}
+
+.btns>button{
+    border: none;
+    color:white;
+    cursor: pointer;
+    height:55px;
+    width:170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin-right:10px;
+    font-size: 1.2rem;
 }
 
 .red{
     background-color: red;
+}
+
+.dark-grey{
+    background-color: darkgray;
+}
+
+.btns>button div{
+    margin:10px;
+}
+
+.onelist{
+    height: auto;
+    width : 90%;
+    border: 1px,solid,black;
+    display: inline-block;
+    background-color:lightpink;
+}
+
+.entry-date{
+    font-size: 1.2rem;
+    /* display: inline-block; */
+}
+
+#delete-task{
+    height: 55px !important;
+    box-sizing: border-box !important;
+    padding-top: 5px;
+}
+
+
+#delete-task:hover{
+    background-color: #C5250E;
+}
+
+#list-conatiner-details{
+    height:auto;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#list-container-details li{
+    color: #66666B;
+    height:auto;
+    list-style: none;
+    margin-bottom: 20px;
+    border-bottom: 2px dashed white;
+    padding-bottom: 10px;
+}
+
+input[type="checkbox"]
+{
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    margin-left: 10px;
+}
+
+input[type="checkbox"]:checked{
+    background-color: #169F5D;
+}
+
+.list-details{
+    vertical-align: top;
+    width:70%;
+    height: auto;
+    margin-left: 2%;
+    margin-right: 5%;
+    display: inline-block;
+}
+
+@media screen and (max-width:990px){
+    .list-details{
+        width: 65%;
+        margin-right: 3%;
+    }
+}
+
+
+.list-category{
+    font-size:1rem;
+    font-weight: bold;
+    width:15%;
+    height:auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: red;
+    display: inline-block;
+    text-transform: uppercase;
+    vertical-align:top;
+    text-align: center;
+    overflow-wrap: break-word;
 }
