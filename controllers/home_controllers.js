@@ -1,5 +1,5 @@
 const User = require('../models/user');
-
+// home controller when we render to the home
 module.exports.home = function(req,res){
     User.find({},function(err,details){
         if(err){

@@ -1,3 +1,4 @@
+// Schema for storing the list details
 const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     description : {

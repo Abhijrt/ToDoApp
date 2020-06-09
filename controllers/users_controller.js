@@ -1,5 +1,6 @@
 const User = require('../models/user');
 
+// create controller method when we call the add task from the button
 module.exports.create = async function(req,res){
     try{
         console.log(req.body);
@@ -33,6 +34,8 @@ module.exports.create = async function(req,res){
     }
 }
 
+
+// destroy method when we delete the task to delete it
 module.exports.destroy = async function(req,res){
     try
     {
