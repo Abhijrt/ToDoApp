@@ -42,8 +42,7 @@ module.exports.destroy = async function(req,res){
         //finding the no of selected checkboxes
         var count=Object.keys(id).length;
         
-        for(let key of Object.keys(id))
-        {
+        for(let key of Object.keys(id)){
             //console.log("key ",key);
             let deletedItem=await User.findByIdAndDelete(key);
             console.log(deletedItem);

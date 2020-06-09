@@ -4,8 +4,7 @@ body{
     color: #66666B;
 }
 
-
-
+/* main container style */
 .home-page-main{
     height: auto;
     width:50%;
@@ -28,10 +27,13 @@ body{
         width: 100%;
     }
 }
+
+/* create a center for align item in center */
 .center{
     text-align: center;
 }
 
+/* form that create a new entry  */
 #new-entry{
     padding : 10px;
     border-top:1.8px solid #F0F0F0;
@@ -42,7 +44,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+/* form category element  */
 #new-entry > div{
     width: 100%;
     height: 75px;
@@ -51,6 +53,7 @@ body{
     box-sizing: border-box;
 }
 
+/* form category haeding */
 #new-entry > div  p
 {
     margin:5px 0px;
@@ -59,6 +62,7 @@ body{
     text-transform: uppercase;
 }
 
+/* styling the description */
 .description{
     width:99%;
     height:55%;
@@ -75,6 +79,7 @@ input::placeholder{
     color:#F3F1F0;
 }
 
+/* Date heading style */
 #due-date{
     border: none;
     padding: 10px;
@@ -83,6 +88,7 @@ input::placeholder{
     width: 80%;
 }
 
+/* selection category heading style */
 #category{
     display: flex;
     padding: 0 !important;
@@ -90,6 +96,8 @@ input::placeholder{
     /* border-right:1.8px solid white ; */
 }
 
+
+/* date with category style */
 #category >div{
     box-sizing: border-box;
     padding-left: 2%;
@@ -101,6 +109,7 @@ input::placeholder{
     border-right: 1.8px solid #F0F0F0;
 }
 
+/* drop down menu style */
 .drop-menu{
     cursor: pointer;
     margin-top: 10px;
@@ -111,6 +120,8 @@ input::placeholder{
     font-weight: bold;
     border-right: 1.8px solid white;
 }
+
+/* drop down menu options style */
 .drop-menu option{
     color: #66666B ;
     font-weight: bold;
@@ -121,6 +132,7 @@ input::placeholder{
     color:#F3F1F0;
 }
 
+/* button container style */
 .btns{
     padding: 20px;
     display: flex;
@@ -131,6 +143,7 @@ input::placeholder{
     height:auto !important;
 }
 
+/* buttons style */
 .btns>button{
     border: none;
     color:white;
@@ -146,12 +159,11 @@ input::placeholder{
     font-size: 1.2rem;
 }
 
-
-
 .btns>button div{
     margin:10px;
 }
 
+/* list style that we saw  */
 .onelist{
     height: auto;
     width : 90%;
@@ -160,11 +172,13 @@ input::placeholder{
     background-color:lightpink;
 }
 
+/* style for date that we saw */
 .entry-date{
     font-size: 1.2rem;
     /* display: inline-block; */
 }
 
+/* delete task button style */
 #delete-task{
     height: 55px !important;
     box-sizing: border-box !important;
@@ -176,6 +190,7 @@ input::placeholder{
     background-color: #C5250E;
 }
 
+/* list details container full */
 #list-conatiner-details{
     height:auto;
     margin-bottom: 0;
@@ -205,6 +220,7 @@ input[type="checkbox"]:checked{
     background-color: #169F5D;
 }
 
+/* details container list */
 .list-details{
     vertical-align: top;
     width:70%;
@@ -221,10 +237,7 @@ input[type="checkbox"]:checked{
     }
 }
 
-
-
-
-
+/* list of category */
 .list-category{
     font-size:1rem;
     font-weight: bold;
@@ -238,15 +251,14 @@ input[type="checkbox"]:checked{
     text-transform: uppercase;
     vertical-align:top;
     text-align: center;
-    overflow-wrap: break-word;
+    overflow-wrap: break-word; 
 }
+
 @media screen and (max-width:900px){
-    .list-category{
+    .category{
         width: 50%;
     }
 }
-
-
 
 .red{
     background-color: red;

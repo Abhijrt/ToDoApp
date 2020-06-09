@@ -1,14 +1,23 @@
+/* Main page  */
 #header-main-container{
-    text-align: left;
-    background-color: cyan;
-    border-radius: 15%;
+    text-align: center;
+    background-color: lightsalmon;
+    border-radius: 50%;
+    height: auto;
+    width:50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
+/* list that we use for name */
 ul{
     list-style-type:none;
     margin: 0;
     padding: 15px;
 }
+
 ul li {
     display: inline;
     margin: 10px;
